@@ -1,0 +1,37 @@
+# detekt overrides for the SignalSmith Android SDK (buildUponDefaultConfig).
+style:
+  MaxLineLength:
+    maxLineLength: 140
+  ReturnCount:
+    max: 4
+  MagicNumber:
+    active: false
+  ForbiddenComment:
+    active: false
+  LoopWithTooManyJumpStatements:
+    maxJumpCount: 2
+complexity:
+  LongParameterList:
+    functionThreshold: 8
+    # Public configuration classes are builder-backed value holders; their
+    # constructors legitimately carry every option (Configuration: 14).
+    constructorThreshold: 18
+  TooManyFunctions:
+    thresholdInClasses: 25
+    thresholdInFiles: 25
+    # The Zeotap facade mirrors every Analytics method (web `window.zeotap`).
+    thresholdInObjects: 25
+  LongMethod:
+    threshold: 80
+  CyclomaticComplexMethod:
+    threshold: 20
+  NestedBlockDepth:
+    threshold: 5
+naming:
+  FunctionNaming:
+    excludes: ['**/test/**']
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException:
+    active: false

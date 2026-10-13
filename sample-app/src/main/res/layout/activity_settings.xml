@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <EditText android:id="@+id/input_api_host" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-api-host" android:hint="apiHost" android:inputType="textUri" android:autofillHints="" />
+        <EditText android:id="@+id/input_write_key" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-write-key" android:hint="writeKey" android:inputType="text" android:autofillHints="" />
+        <EditText android:id="@+id/input_flush_at" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-flush-at" android:hint="flushAt" android:inputType="number" android:autofillHints="" />
+        <EditText android:id="@+id/input_flush_interval" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-flush-interval" android:hint="flushIntervalMs" android:inputType="number" android:autofillHints="" />
+        <EditText android:id="@+id/input_cmp_timeout" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-cmp-timeout" android:hint="cmpTimeoutMs" android:inputType="number" android:autofillHints="" />
+        <CheckBox android:id="@+id/chk_consent_require" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-consent-require" android:text="consent.require (opt-in gating)" />
+        <CheckBox android:id="@+id/chk_consent_denied" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-consent-denied" android:text="consent.default = denied" />
+        <CheckBox android:id="@+id/chk_cmp_auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-cmp-auto" android:text="consent.cmp = auto (IABTCF prefs)" />
+        <CheckBox android:id="@+id/chk_lifecycle" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-lifecycle" android:text="trackApplicationLifecycleEvents" />
+        <CheckBox android:id="@+id/chk_ad_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-ad-id" android:text="collectAdvertisingId" />
+        <CheckBox android:id="@+id/chk_auto_load" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="chk-auto-load" android:text="auto-load SDK on launch" />
+        <Button android:id="@+id/btn_save" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="btn-save" android:text="@string/save" />
+    </LinearLayout>
+</ScrollView>

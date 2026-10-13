@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btn_preset_granted" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:contentDescription="btn-preset-granted" android:text="Granted 1469" />
+            <Button android:id="@+id/btn_preset_vendor_denied" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:contentDescription="btn-preset-vendor-denied" android:text="Vendor denied" />
+            <Button android:id="@+id/btn_preset_gdpr_na" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:contentDescription="btn-preset-gdpr-na" android:text="GDPR n/a" />
+        </LinearLayout>
+        <EditText android:id="@+id/input_tc_string" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-tc-string" android:hint="IABTCF_TCString" android:inputType="text" android:autofillHints="" />
+        <EditText android:id="@+id/input_purposes" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-purposes" android:hint="IABTCF_PurposeConsents (bits)" android:inputType="text" android:autofillHints="" />
+        <EditText android:id="@+id/input_vendors" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-vendors" android:hint="IABTCF_VendorConsents (bits)" android:inputType="text" android:autofillHints="" />
+        <EditText android:id="@+id/input_gdpr_applies" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="input-gdpr-applies" android:hint="IABTCF_gdprApplies (0/1)" android:inputType="number" android:autofillHints="" />
+        <Button android:id="@+id/btn_tcf_write" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="btn-tcf-write" android:text="Write IABTCF_* (CMP answered)" />
+        <Button android:id="@+id/btn_tcf_cmp_only" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="btn-tcf-cmp-only" android:text="Write CmpSdkID only (CMP shown, no answer)" />
+        <Button android:id="@+id/btn_tcf_clear" android:layout_width="match_parent" android:layout_height="wrap_content" android:contentDescription="btn-tcf-clear" android:text="Clear IABTCF_*" />
+    </LinearLayout>
+</ScrollView>
