@@ -36,7 +36,12 @@ DRY_RUN="false"
 # The GCS bucket the results land in. Per-run prefix so a failed run's artifacts
 # are not overwritten by the next one — the videos and logcat are the whole
 # point of paying for real devices.
-RESULTS_BUCKET="${FTL_RESULTS_BUCKET:-signalsmith-ftl-results}"
+# No default: the bucket belongs to whoever runs the matrix (the workflow passes
+# its own), and a guessed name would upload device logs somewhere unexpected.
+RESULTS_BUCKET="${FTL_RESULTS_BUCKET:-}"
+[[ -n "$RESULTS_BUCKET" || "$DRY_RUN" == "true" ]] \
+  || { echo "FTL_RESULTS_BUCKET is required (the GCS bucket for Test Lab results)" >&2; exit 2; }
+RESULTS_BUCKET="${RESULTS_BUCKET:-dry-run-bucket}"
 RESULTS_DIR="android-$(date -u +%Y%m%d-%H%M%S)-${GITHUB_RUN_ID:-local}"
 
 # --- The device matrix -------------------------------------------------------

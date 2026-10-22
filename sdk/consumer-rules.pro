@@ -1,4 +1,4 @@
-# SignalSmith Android SDK — rules applied to consumers that shrink.
+# Zeotap Android SDK — rules applied to consumers that shrink.
 # Public API surface (Kotlin metadata kept so default arguments survive).
 -keep class com.zeotap.sdk.Zeotap { *; }
 -keep class com.zeotap.sdk.Analytics { public *; }

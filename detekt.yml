@@ -1,4 +1,4 @@
-# detekt overrides for the SignalSmith Android SDK (buildUponDefaultConfig).
+# detekt overrides for the Zeotap Android SDK (buildUponDefaultConfig).
 style:
   MaxLineLength:
     maxLineLength: 140

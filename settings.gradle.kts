@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "signalsmith-android"
+rootProject.name = "zeotap-android-sdk"
 
 include(":sdk")
 include(":sample-app")

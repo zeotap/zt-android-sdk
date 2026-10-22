@@ -1,4 +1,4 @@
-# Android build image for the SignalSmith Android SDK (increment 242).
+# Android build image for the Zeotap Android SDK (increment 242).
 #
 # Used by the `sdk-android` step of cloudbuild-sdk-pr.yaml and for local
 # builds on machines without an Android SDK (`make sdk-android-test` runs
@@ -8,7 +8,7 @@
 #
 # Build (amd64 — Google publishes no arm64 Linux build-tools; Apple-silicon
 # hosts run it under Rosetta):
-#   docker build --platform linux/amd64 -t signalsmith-android-build:local sdk/android/ci
+#   docker build --platform linux/amd64 -t zeotap-android-sdk-build:local sdk/android/ci
 FROM --platform=linux/amd64 eclipse-temurin:17-jdk
 
 ENV ANDROID_HOME=/opt/android-sdk \

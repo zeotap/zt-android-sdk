@@ -1,4 +1,4 @@
-// Root build for the SignalSmith Android SDK (increment 242).
+// Root build for the Zeotap Android SDK (increment 242).
 // Modules: :sdk (the library, com.zeotap.sdk:android-sdk) and :sample-app
 // (the instrumentation / Maestro host app). See sdk/android/README.md.
 plugins {
