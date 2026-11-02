@@ -1,5 +1,5 @@
 // Root build for the Zeotap Android SDK (increment 242).
-// Modules: :sdk (the library, com.zeotap.sdk:android-sdk) and :sample-app
+// Modules: :sdk (the library, io.github.zeotap:android-sdk) and :sample-app
 // (the instrumentation / Maestro host app). See sdk/android/README.md.
 plugins {
     alias(libs.plugins.android.library) apply false

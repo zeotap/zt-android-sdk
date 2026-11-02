@@ -1,6 +1,6 @@
 # Zeotap Android SDK
 
-`com.zeotap.sdk:android-sdk` collects events from Android apps and sends them to Zeotap. It uses the
+`io.github.zeotap:android-sdk` collects events from Android apps and sends them to Zeotap. It uses the
 same event model, consent model, on-device identity hashing and wire format as the Zeotap browser
 SDK. Shared conformance vectors, generated from the browser SDK and run by this repository's tests,
 prove those parts match. It also adds what a mobile app needs:
@@ -28,7 +28,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("com.zeotap.sdk:android-sdk:<version>")
+    implementation("io.github.zeotap:android-sdk:<version>")
 }
 ```
 

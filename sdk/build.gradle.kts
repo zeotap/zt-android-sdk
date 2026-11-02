@@ -171,27 +171,15 @@ apiValidation {
 }
 
 // ---------------------------------------------------------------------------
-// Publishing — com.zeotap.sdk:android-sdk. Coordinates/POM from gradle.properties.
-// Maven Central (customer channel) needs Sonatype + GPG credentials; Artifact
-// Registry (internal channel) needs a Google credential. Both configured in CI.
+// Publishing — io.github.zeotap:android-sdk. Coordinates/POM from gradle.properties.
+// Maven Central is the only channel; it needs Sonatype + GPG credentials, both
+// supplied by the release pipeline. There is deliberately no internal registry:
+// anything inside Zeotap resolves the SDK from Central like a customer does.
 // ---------------------------------------------------------------------------
 mavenPublishing {
     configure(AndroidSingleVariantLibrary(variant = "release", sourcesJar = true, publishJavadocJar = true))
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     if (providers.environmentVariable("ORG_GRADLE_PROJECT_signingInMemoryKey").isPresent) {
         signAllPublications()
-    }
-}
-
-publishing {
-    repositories {
-        maven {
-            name = "ArtifactRegistry"
-            url = uri("https://europe-west1-maven.pkg.dev/zeotap-prod-microsvcs/android-sdk")
-            credentials {
-                username = "oauth2accesstoken"
-                password = providers.environmentVariable("ARTIFACT_REGISTRY_TOKEN").orNull ?: ""
-            }
-        }
     }
 }
